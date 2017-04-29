@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<DOCUMENT Type="Advanced Installer" CreateVersion="13.8.1" version="13.8.1" Modules="simple" RootPath="." Language="en" Id="{32B5B86D-3FB9-4DAD-BB30-CAB2D49B0818}">
+  <COMPONENT cid="caphyon.advinst.msicomp.ProjectOptionsComponent">
+    <ROW Name="HiddenItems" Value="AppXProductDetailsComponent;AppXDependenciesComponent;AppXAppDetailsComponent;AppXVisualAssetsComponent;AppXCapabilitiesComponent;AppXAppDeclarationsComponent;AppXUriRulesComponent;MsiThemeComponent;BackgroundImagesComponent;UpdaterComponent;SerValComponent;DigCertStoreComponent;MsiInstExSeqComponent;DictionaryComponent;MsiAppSearchComponent;MsiAssemblyComponent;MsiClassComponent;MsiOdbcDataSrcComponent;MsiServInstComponent;MsiOrgComponent;MsiExtComponent;CPLAppletComponent;ActSyncAppComponent;PreReqComponent;WebApplicationsComponent;TilesComponent;MsiJavaComponent;MsiDriverPackagesComponent;UserAccountsComponent;ScheduledTasksComponent;SqlConnectionComponent;AutorunComponent;FirewallExceptionComponent;GameUxComponent;MsiDirectEditorComponent;SharePointSlnComponent;SilverlightSlnComponent;MultipleInstancesComponent;SccmComponent;TilesComponent"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiPropsComponent">
+    <ROW Property="AI_BITMAP_DISPLAY_MODE" Value="0"/>
+    <ROW Property="ALLUSERS" Value="1"/>
+    <ROW Property="ARPNOMODIFY" MultiBuildValue="DefaultBuild:1"/>
+    <ROW Property="ARPNOREPAIR" Value="1"/>
+    <ROW Property="ARPURLINFOABOUT" Value="https://github.com/svenkle/nuget-server"/>
+    <ROW Property="Manufacturer" Value="Svenkle"/>
+    <ROW Property="ProductCode" Value="1033:{34A747D8-C6B1-41BA-BA69-3994F562B94A} " Type="16"/>
+    <ROW Property="ProductLanguage" Value="1033"/>
+    <ROW Property="ProductName" Value="NuGet Server"/>
+    <ROW Property="ProductVersion" Value="0.0.6328.28708" Type="32" TargetFile="Svenkle.NuGetServer.Service.exe"/>
+    <ROW Property="SecureCustomProperties" Value="OLDPRODUCTS;AI_NEWERPRODUCTFOUND"/>
+    <ROW Property="UpgradeCode" Value="{4C12923C-88E2-4863-A671-5C5E511357AF}"/>
+    <ROW Property="WindowsType9X" MultiBuildValue="DefaultBuild:Windows 9x/ME" ValueLocId="-"/>
+    <ROW Property="WindowsType9XDisplay" MultiBuildValue="DefaultBuild:Windows 9x/ME" ValueLocId="-"/>
+    <ROW Property="WindowsTypeNT" MultiBuildValue="DefaultBuild:Windows XP x86 Service Pack 3, Windows Server 2003 x86 Service Pack 2, Windows Vista x86, Windows Vista x86 Service Pack 1, Windows Vista x86 Service Pack 2, Windows Server 2008 x86" ValueLocId="-"/>
+    <ROW Property="WindowsTypeNT40" MultiBuildValue="DefaultBuild:Windows NT 4.0" ValueLocId="-"/>
+    <ROW Property="WindowsTypeNT40Display" MultiBuildValue="DefaultBuild:Windows NT 4.0" ValueLocId="-"/>
+    <ROW Property="WindowsTypeNT50" MultiBuildValue="DefaultBuild:Windows 2000" ValueLocId="-"/>
+    <ROW Property="WindowsTypeNT50Display" MultiBuildValue="DefaultBuild:Windows 2000" ValueLocId="-"/>
+    <ROW Property="WindowsTypeNT5X" MultiBuildValue="DefaultBuild:Windows XP/2003 RTM, Windows XP/2003 SP1, Windows XP SP2 x86" ValueLocId="-"/>
+    <ROW Property="WindowsTypeNT5XDisplay" MultiBuildValue="DefaultBuild:Windows XP/2003 RTM, Windows XP/2003 SP1, Windows XP SP2 x86" ValueLocId="-"/>
+    <ROW Property="WindowsTypeNT64" MultiBuildValue="DefaultBuild:Windows XP x64 Service Pack 2, Windows Server 2003 x64 Service Pack 2, Windows Vista x64, Windows Vista x64 Service Pack 1, Windows Vista x64 Service Pack 2, Windows Server 2008 x64" ValueLocId="-"/>
+    <ROW Property="WindowsTypeNT64Display" MultiBuildValue="DefaultBuild:Windows XP x64 Service Pack 2, Windows Server 2003 x64 Service Pack 2, Windows Vista x64, Windows Server 2008 x64" ValueLocId="-"/>
+    <ROW Property="WindowsTypeNTDisplay" MultiBuildValue="DefaultBuild:Windows XP x86 Service Pack 3, Windows Server 2003 x86 Service Pack 2, Windows Vista x86, Windows Server 2008 x86" ValueLocId="-"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiDirsComponent">
+    <ROW Directory="APPDIR" Directory_Parent="TARGETDIR" DefaultDir="APPDIR:." IsPseudoRoot="1"/>
+    <ROW Directory="DataServices_Dir" Directory_Parent="Website_Dir" DefaultDir="DATASE~1|DataServices"/>
+    <ROW Directory="Packages_Dir" Directory_Parent="Website_Dir" DefaultDir="Packages"/>
+    <ROW Directory="TARGETDIR" DefaultDir="SourceDir"/>
+    <ROW Directory="Website_Dir" Directory_Parent="APPDIR" DefaultDir="Website"/>
+    <ROW Directory="bin_Dir" Directory_Parent="Website_Dir" DefaultDir="bin"/>
+    <ROW Directory="roslyn_Dir" Directory_Parent="bin_Dir" DefaultDir="roslyn"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiCompsComponent">
+    <ROW Component="CurrentControlSet" ComponentId="{F766E0A7-0B4E-430F-A705-16BCACCA5B64}" Directory_="APPDIR" Attributes="4" KeyPath="CurrentControlSet"/>
+    <ROW Component="Default.aspx" ComponentId="{38B7E377-0619-4C14-8B73-32DBD0A69BB7}" Directory_="Website_Dir" Attributes="0" KeyPath="Default.aspx" Type="0"/>
+    <ROW Component="DelayedAutostart" ComponentId="{A4559694-F1D3-4A9F-ACD4-A9C112D13384}" Directory_="APPDIR" Attributes="4" KeyPath="DelayedAutostart"/>
+    <ROW Component="Description" ComponentId="{DA2FEA3B-8409-4D9D-AC6F-CB49F955E601}" Directory_="APPDIR" Attributes="4" KeyPath="Description"/>
+    <ROW Component="DisplayName" ComponentId="{8E150D3B-A489-4EB4-B8E3-AE338E766B3B}" Directory_="APPDIR" Attributes="4" KeyPath="DisplayName"/>
+    <ROW Component="ErrorControl" ComponentId="{DFBE5F99-0D9C-4707-B7DC-D9F6AD825B45}" Directory_="APPDIR" Attributes="4" KeyPath="ErrorControl"/>
+    <ROW Component="ImagePath" ComponentId="{F1AAA84A-8ECE-4AA1-8C00-49DBB30DE222}" Directory_="APPDIR" Attributes="4" KeyPath="ImagePath"/>
+    <ROW Component="Microsoft.Build.Tasks.CodeAnalysis.dll" ComponentId="{A4E03FB0-9A27-40E6-BC8D-9E40A8ADC326}" Directory_="roslyn_Dir" Attributes="0" KeyPath="Microsoft.Build.Tasks.CodeAnalysis.dll"/>
+    <ROW Component="Microsoft.CodeAnalysis.CSharp.Scripting." ComponentId="{C7119DAB-821F-4CB2-8AE4-357D289A037E}" Directory_="roslyn_Dir" Attributes="0" KeyPath="Microsoft.CodeAnalysis.CSharp.Scripting.dll"/>
+    <ROW Component="Microsoft.CodeAnalysis.CSharp.dll" ComponentId="{5E7DA857-6440-4E95-8A5D-AF01DE039934}" Directory_="roslyn_Dir" Attributes="0" KeyPath="Microsoft.CodeAnalysis.CSharp.dll"/>
+    <ROW Component="Microsoft.CodeAnalysis.Scripting.dll" ComponentId="{6F0A8B80-70B2-422E-9449-396C17A1C02B}" Directory_="roslyn_Dir" Attributes="0" KeyPath="Microsoft.CodeAnalysis.Scripting.dll"/>
+    <ROW Component="Microsoft.CodeAnalysis.VisualBasic.dll" ComponentId="{6AFC4C2F-9A27-4543-8959-48900C727D66}" Directory_="roslyn_Dir" Attributes="0" KeyPath="Microsoft.CodeAnalysis.VisualBasic.dll"/>
+    <ROW Component="Microsoft.CodeAnalysis.dll" ComponentId="{0B5FF797-0D36-46ED-8894-D24F7085BEA9}" Directory_="roslyn_Dir" Attributes="0" KeyPath="Microsoft.CodeAnalysis.dll"/>
+    <ROW Component="Microsoft.CodeDom.Providers.DotNetCompil" ComponentId="{D85863F2-604A-49A5-B23F-FB0A39EC5CFE}" Directory_="bin_Dir" Attributes="0" KeyPath="Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll"/>
+    <ROW Component="Microsoft.DiaSymReader.Native.amd64.dll" ComponentId="{9D65357C-8618-4140-A94A-C5665588A25B}" Directory_="roslyn_Dir" Attributes="256" KeyPath="Microsoft.DiaSymReader.Native.amd64.dll"/>
+    <ROW Component="Microsoft.DiaSymReader.Native.x86.dll" ComponentId="{78B55640-4F0B-4F4C-AB70-F20EF90EBCE4}" Directory_="roslyn_Dir" Attributes="0" KeyPath="Microsoft.DiaSymReader.Native.x86.dll"/>
+    <ROW Component="Microsoft.Web.Infrastructure.dll" ComponentId="{CBF9A2AC-AC93-43F1-B4D6-238C2C242C33}" Directory_="bin_Dir" Attributes="0" KeyPath="Microsoft.Web.Infrastructure.dll"/>
+    <ROW Component="Microsoft.Web.XmlTransform.dll" ComponentId="{4F757C3C-BB74-42B0-806F-5FD3BACECB01}" Directory_="bin_Dir" Attributes="0" KeyPath="Microsoft.Web.XmlTransform.dll"/>
+    <ROW Component="Microsoft.Win32.Primitives.dll" ComponentId="{4A4C7C56-A8EE-4285-8681-23CE7635F609}" Directory_="roslyn_Dir" Attributes="0" KeyPath="Microsoft.Win32.Primitives.dll"/>
+    <ROW Component="Newtonsoft.Json.dll" ComponentId="{1A4E4C90-9923-4780-923F-2FC2B1B7BF32}" Directory_="bin_Dir" Attributes="0" KeyPath="Newtonsoft.Json.dll"/>
+    <ROW Component="NuGet.Core.dll" ComponentId="{C112E354-422D-42FF-B9DD-FD15C2CFC44E}" Directory_="bin_Dir" Attributes="0" KeyPath="NuGet.Core.dll"/>
+    <ROW Component="NuGet.Server.dll" ComponentId="{763796AC-F593-43FD-A8A3-D570727BD48E}" Directory_="bin_Dir" Attributes="0" KeyPath="NuGet.Server.dll"/>
+    <ROW Component="NuGetServer" ComponentId="{6EEB17E2-16C4-46D3-8C7A-6F63BEC480B8}" Directory_="APPDIR" Attributes="4" KeyPath="NuGetServer"/>
+    <ROW Component="ObjectName" ComponentId="{D0E574BB-1160-4814-AAA0-0F8265A5CAE7}" Directory_="APPDIR" Attributes="4" KeyPath="ObjectName"/>
+    <ROW Component="Packages.svc" ComponentId="{BD09B6DE-B5E5-4CBB-860E-9A1617FE3921}" Directory_="DataServices_Dir" Attributes="0" KeyPath="Packages.svc" Type="0"/>
+    <ROW Component="Readme.txt" ComponentId="{BC7EB4B0-87D7-4405-B1ED-A5E9CA3C5E6B}" Directory_="Packages_Dir" Attributes="0" KeyPath="Readme.txt" Type="0"/>
+    <ROW Component="RouteMagic.dll" ComponentId="{C05C702F-3B3C-45BB-B4DC-6B4216D52438}" Directory_="bin_Dir" Attributes="0" KeyPath="RouteMagic.dll"/>
+    <ROW Component="SYSTEM" ComponentId="{C4868FBD-6F66-46F9-9E18-81EE0ABBBB18}" Directory_="APPDIR" Attributes="4" KeyPath="SYSTEM"/>
+    <ROW Component="Services" ComponentId="{A44C96C2-2A21-4E29-A48B-2BAAF2E0D962}" Directory_="APPDIR" Attributes="4" KeyPath="Services"/>
+    <ROW Component="Start" ComponentId="{80894D93-DF3F-4243-AEC7-D5436DB7D165}" Directory_="APPDIR" Attributes="4" KeyPath="Start"/>
+    <ROW Component="Svenkle.NuGetServer.Service.exe" ComponentId="{F3E531D0-3B25-413C-8668-0602561660EB}" Directory_="APPDIR" Attributes="0" KeyPath="Svenkle.NuGetServer.Service.exe"/>
+    <ROW Component="Svenkle.NuGetServer.Service.exe.config" ComponentId="{59B140BA-D2D9-40CE-A516-AAE673FCBC89}" Directory_="APPDIR" Attributes="0" KeyPath="Svenkle.NuGetServer.Service.exe.config" Type="0"/>
+    <ROW Component="Svenkle.NuGetServer.Website.dll" ComponentId="{EDF45E76-CFA3-4416-BBBB-D496489B72AD}" Directory_="bin_Dir" Attributes="0" KeyPath="Svenkle.NuGetServer.Website.dll"/>
+    <ROW Component="System.AppContext.dll" ComponentId="{86CDC9F4-0C18-4769-817E-2106E049E321}" Directory_="roslyn_Dir" Attributes="0" KeyPath="System.AppContext.dll"/>
+    <ROW Component="System.Collections.Immutable.dll" ComponentId="{8C0B6236-C902-4006-95A1-9317059619DF}" Directory_="roslyn_Dir" Attributes="0" KeyPath="System.Collections.Immutable.dll"/>
+    <ROW Component="System.Console.dll" ComponentId="{B7BB2BA5-ACC7-4134-AD95-9DB7BBBB6091}" Directory_="roslyn_Dir" Attributes="0" KeyPath="System.Console.dll"/>
+    <ROW Component="System.Diagnostics.FileVersionInfo.dll" ComponentId="{2EC98D23-31EA-423E-A96F-0C07446AA79C}" Directory_="roslyn_Dir" Attributes="0" KeyPath="System.Diagnostics.FileVersionInfo.dll"/>
+    <ROW Component="System.Diagnostics.Process.dll" ComponentId="{85C5D23C-5DF1-4D29-930A-8FB40568DAD8}" Directory_="roslyn_Dir" Attributes="0" KeyPath="System.Diagnostics.Process.dll"/>
+    <ROW Component="System.Diagnostics.StackTrace.dll" ComponentId="{F792B187-0325-4118-A176-65CFDA576597}" Directory_="roslyn_Dir" Attributes="0" KeyPath="System.Diagnostics.StackTrace.dll"/>
+    <ROW Component="System.IO.Compression.dll" ComponentId="{9B4D3052-CED9-4013-B7C5-BC69A3E8F5C0}" Directory_="roslyn_Dir" Attributes="0" KeyPath="System.IO.Compression.dll"/>
+    <ROW Component="System.IO.FileSystem.DriveInfo.dll" ComponentId="{3306DFB2-7185-4C91-9821-7A4994A052ED}" Directory_="roslyn_Dir" Attributes="0" KeyPath="System.IO.FileSystem.DriveInfo.dll"/>
+    <ROW Component="System.IO.FileSystem.Primitives.dll" ComponentId="{CED50C26-D20D-4177-8D71-C10A551B058B}" Directory_="roslyn_Dir" Attributes="0" KeyPath="System.IO.FileSystem.Primitives.dll"/>
+    <ROW Component="System.IO.FileSystem.dll" ComponentId="{B0AC5D18-4196-4D17-8187-C535B5A9A8DA}" Directory_="roslyn_Dir" Attributes="0" KeyPath="System.IO.FileSystem.dll"/>
+    <ROW Component="System.IO.Pipes.dll" ComponentId="{562D897D-3EEE-4E40-8583-D4A69C69880E}" Directory_="roslyn_Dir" Attributes="0" KeyPath="System.IO.Pipes.dll"/>
+    <ROW Component="System.Reflection.Metadata.dll" ComponentId="{E5E75D43-8D78-4411-9313-F3F2D9CFF0CA}" Directory_="roslyn_Dir" Attributes="0" KeyPath="System.Reflection.Metadata.dll"/>
+    <ROW Component="System.Security.AccessControl.dll" ComponentId="{53E8489E-5F7A-4CA4-9D64-DE0E1376413E}" Directory_="roslyn_Dir" Attributes="0" KeyPath="System.Security.AccessControl.dll"/>
+    <ROW Component="System.Security.Claims.dll" ComponentId="{1B402AB4-51AC-4EC2-A270-2679463FDAB6}" Directory_="roslyn_Dir" Attributes="0" KeyPath="System.Security.Claims.dll"/>
+    <ROW Component="System.Security.Cryptography.Algorithms." ComponentId="{67E54FCB-714C-4D85-BC35-9004E0202422}" Directory_="roslyn_Dir" Attributes="0" KeyPath="System.Security.Cryptography.Algorithms.dll"/>
+    <ROW Component="System.Security.Cryptography.Encoding.dl" ComponentId="{47E17C8D-22AB-4854-8BEC-7B72F6AB4691}" Directory_="roslyn_Dir" Attributes="0" KeyPath="System.Security.Cryptography.Encoding.dll"/>
+    <ROW Component="System.Security.Cryptography.Primitives." ComponentId="{13817024-2AA7-4481-85FF-D225B550188E}" Directory_="roslyn_Dir" Attributes="0" KeyPath="System.Security.Cryptography.Primitives.dll"/>
+    <ROW Component="System.Security.Cryptography.X509Certifi" ComponentId="{9DD8058F-8B19-4C18-8433-5F77D4EE0CA1}" Directory_="roslyn_Dir" Attributes="0" KeyPath="System.Security.Cryptography.X509Certificates.dll"/>
+    <ROW Component="System.Security.Principal.Windows.dll" ComponentId="{CE7CE685-AA1F-4360-88A1-410F940D7600}" Directory_="roslyn_Dir" Attributes="0" KeyPath="System.Security.Principal.Windows.dll"/>
+    <ROW Component="System.Text.Encoding.CodePages.dll" ComponentId="{C2375406-06AE-4B16-8964-765BB26BC8A0}" Directory_="roslyn_Dir" Attributes="0" KeyPath="System.Text.Encoding.CodePages.dll"/>
+    <ROW Component="System.Threading.Thread.dll" ComponentId="{D4F20454-38CB-4520-AEAD-43C20C0CC451}" Directory_="roslyn_Dir" Attributes="0" KeyPath="System.Threading.Thread.dll"/>
+    <ROW Component="System.ValueTuple.dll" ComponentId="{9188D427-1A5D-4508-986B-ADAC54A19A45}" Directory_="roslyn_Dir" Attributes="0" KeyPath="System.ValueTuple.dll"/>
+    <ROW Component="System.Xml.ReaderWriter.dll" ComponentId="{0EF7F7B2-79DE-4D1E-82B2-08CBDE858E51}" Directory_="roslyn_Dir" Attributes="0" KeyPath="System.Xml.ReaderWriter.dll"/>
+    <ROW Component="System.Xml.XPath.XDocument.dll" ComponentId="{CF136608-4BF6-4F84-A73D-EA70E03C1F3D}" Directory_="roslyn_Dir" Attributes="0" KeyPath="System.Xml.XPath.XDocument.dll"/>
+    <ROW Component="System.Xml.XPath.dll" ComponentId="{8475B087-A797-48C9-B7EB-D133AC4ED582}" Directory_="roslyn_Dir" Attributes="0" KeyPath="System.Xml.XPath.dll"/>
+    <ROW Component="System.Xml.XmlDocument.dll" ComponentId="{923AF56D-BFDF-4CFF-BEDB-5CC797D709CE}" Directory_="roslyn_Dir" Attributes="0" KeyPath="System.Xml.XmlDocument.dll"/>
+    <ROW Component="Type" ComponentId="{8F138537-C49A-4FF1-AD12-765F66D6DD90}" Directory_="APPDIR" Attributes="4" KeyPath="Type"/>
+    <ROW Component="VBCSCompiler.exe" ComponentId="{766CE336-0323-4897-BDCA-15B5D9E8AA20}" Directory_="roslyn_Dir" Attributes="0" KeyPath="VBCSCompiler.exe"/>
+    <ROW Component="WOW64" ComponentId="{CBA821B5-D8D1-45AE-B29B-47BF4B3CE7AD}" Directory_="APPDIR" Attributes="4" KeyPath="WOW64"/>
+    <ROW Component="WebActivatorEx.dll" ComponentId="{FDF6C438-D761-4D4B-B3D6-6FF4569735C1}" Directory_="bin_Dir" Attributes="0" KeyPath="WebActivatorEx.dll"/>
+    <ROW Component="csc.exe" ComponentId="{160BE6E7-2334-4528-A009-122F13ABCAB0}" Directory_="roslyn_Dir" Attributes="0" KeyPath="csc.exe"/>
+    <ROW Component="csc.exe.config" ComponentId="{8E22FE19-23D1-4498-A647-1FC0300282DE}" Directory_="roslyn_Dir" Attributes="0" KeyPath="csc.exe.config" Type="0"/>
+    <ROW Component="csi.exe" ComponentId="{F5DF612E-DB42-433E-AF2C-BE94A6718325}" Directory_="roslyn_Dir" Attributes="0" KeyPath="csi.exe"/>
+    <ROW Component="vbc.exe" ComponentId="{5BE9A4E6-A649-4897-92D0-74725C89106A}" Directory_="roslyn_Dir" Attributes="0" KeyPath="vbc.exe"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiFeatsComponent">
+    <ROW Feature="MainFeature" Title="MainFeature" Description="Description" Display="1" Level="1" Directory_="APPDIR" Attributes="0" Components="CurrentControlSet Default.aspx DelayedAutostart Description DisplayName ErrorControl ImagePath Microsoft.Build.Tasks.CodeAnalysis.dll Microsoft.CodeAnalysis.CSharp.Scripting. Microsoft.CodeAnalysis.CSharp.dll Microsoft.CodeAnalysis.Scripting.dll Microsoft.CodeAnalysis.VisualBasic.dll Microsoft.CodeAnalysis.dll Microsoft.CodeDom.Providers.DotNetCompil Microsoft.DiaSymReader.Native.amd64.dll Microsoft.DiaSymReader.Native.x86.dll Microsoft.Web.Infrastructure.dll Microsoft.Web.XmlTransform.dll Microsoft.Win32.Primitives.dll Newtonsoft.Json.dll NuGet.Core.dll NuGet.Server.dll NuGetServer ObjectName Packages.svc Readme.txt RouteMagic.dll SYSTEM Services Start Svenkle.NuGetServer.Service.exe Svenkle.NuGetServer.Service.exe.config Svenkle.NuGetServer.Website.dll System.AppContext.dll System.Collections.Immutable.dll System.Console.dll System.Diagnostics.FileVersionInfo.dll System.Diagnostics.Process.dll System.Diagnostics.StackTrace.dll System.IO.Compression.dll System.IO.FileSystem.DriveInfo.dll System.IO.FileSystem.Primitives.dll System.IO.FileSystem.dll System.IO.Pipes.dll System.Reflection.Metadata.dll System.Security.AccessControl.dll System.Security.Claims.dll System.Security.Cryptography.Algorithms. System.Security.Cryptography.Encoding.dl System.Security.Cryptography.Primitives. System.Security.Cryptography.X509Certifi System.Security.Principal.Windows.dll System.Text.Encoding.CodePages.dll System.Threading.Thread.dll System.ValueTuple.dll System.Xml.ReaderWriter.dll System.Xml.XPath.XDocument.dll System.Xml.XPath.dll System.Xml.XmlDocument.dll Type VBCSCompiler.exe WOW64 WebActivatorEx.dll csc.exe csc.exe.config csi.exe vbc.exe"/>
+    <ATTRIBUTE name="CurrentFeature" value="MainFeature"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiFilesComponent">
+    <ROW File="Default.aspx" Component_="Default.aspx" FileName="DEFAUL~1.ASP|Default.aspx" Attributes="0" SourcePath="..\src\Svenkle.NuGetServer.Service\bin\Release\Website\Default.aspx" SelfReg="false" NextFile="favicon.ico"/>
+    <ROW File="Microsoft.Build.Tasks.CodeAnalysis.dll" Component_="Microsoft.Build.Tasks.CodeAnalysis.dll" FileName="MICROS~1.DLL|Microsoft.Build.Tasks.CodeAnalysis.dll" Attributes="0" SourcePath="..\src\Svenkle.NuGetServer.Service\bin\Release\Website\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll" SelfReg="false" NextFile="Microsoft.CodeAnalysis.CSharp.dll"/>
+    <ROW File="Microsoft.CSharp.Core.targets" Component_="csc.exe.config" FileName="MICROS~1.TAR|Microsoft.CSharp.Core.targets" Attributes="0" SourcePath="..\src\Svenkle.NuGetServer.Service\bin\Release\Website\bin\roslyn\Microsoft.CSharp.Core.targets" SelfReg="false" NextFile="Microsoft.DiaSymReader.Native.amd64.dll"/>
+    <ROW File="Microsoft.CodeAnalysis.CSharp.Scripting.dll" Component_="Microsoft.CodeAnalysis.CSharp.Scripting." FileName="MICROS~3.DLL|Microsoft.CodeAnalysis.CSharp.Scripting.dll" Attributes="0" SourcePath="..\src\Svenkle.NuGetServer.Service\bin\Release\Website\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll" SelfReg="false" NextFile="Microsoft.CodeAnalysis.dll"/>
+    <ROW File="Microsoft.CodeAnalysis.CSharp.dll" Component_="Microsoft.CodeAnalysis.CSharp.dll" FileName="MICROS~2.DLL|Microsoft.CodeAnalysis.CSharp.dll" Attributes="0" SourcePath="..\src\Svenkle.NuGetServer.Service\bin\Release\Website\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll" SelfReg="false" NextFile="Microsoft.CodeAnalysis.CSharp.Scripting.dll"/>
+    <ROW File="Microsoft.CodeAnalysis.Scripting.dll" Component_="Microsoft.CodeAnalysis.Scripting.dll" FileName="MICROS~5.DLL|Microsoft.CodeAnalysis.Scripting.dll" Attributes="0" SourcePath="..\src\Svenkle.NuGetServer.Service\bin\Release\Website\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll" SelfReg="false" NextFile="Microsoft.CodeAnalysis.VisualBasic.dll"/>
+    <ROW File="Microsoft.CodeAnalysis.VisualBasic.dll" Component_="Microsoft.CodeAnalysis.VisualBasic.dll" FileName="MICROS~6.DLL|Microsoft.CodeAnalysis.VisualBasic.dll" Attributes="0" SourcePath="..\src\Svenkle.NuGetServer.Service\bin\Release\Website\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll" SelfReg="false" NextFile="Microsoft.CSharp.Core.targets"/>
+    <ROW File="Microsoft.CodeAnalysis.dll" Component_="Microsoft.CodeAnalysis.dll" FileName="MICROS~4.DLL|Microsoft.CodeAnalysis.dll" Attributes="0" SourcePath="..\src\Svenkle.NuGetServer.Service\bin\Release\Website\bin\roslyn\Microsoft.CodeAnalysis.dll" SelfReg="false" NextFile="Microsoft.CodeAnalysis.Scripting.dll"/>
+    <ROW File="Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll" Component_="Microsoft.CodeDom.Providers.DotNetCompil" FileName="MICROS~1.DLL|Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll" Attributes="0" SourcePath="..\src\Svenkle.NuGetServer.Service\bin\Release\Website\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll" SelfReg="false" NextFile="Microsoft.Web.Infrastructure.dll"/>
+    <ROW File="Microsoft.DiaSymReader.Native.amd64.dll" Component_="Microsoft.DiaSymReader.Native.amd64.dll" FileName="MICROS~7.DLL|Microsoft.DiaSymReader.Native.amd64.dll" Attributes="0" SourcePath="..\src\Svenkle.NuGetServer.Service\bin\Release\Website\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll" SelfReg="false" NextFile="Microsoft.DiaSymReader.Native.x86.dll"/>
+    <ROW File="Microsoft.DiaSymReader.Native.x86.dll" Component_="Microsoft.DiaSymReader.Native.x86.dll" FileName="MICROS~8.DLL|Microsoft.DiaSymReader.Native.x86.dll" Attributes="0" SourcePath="..\src\Svenkle.NuGetServer.Service\bin\Release\Website\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll" SelfReg="false" NextFile="Microsoft.VisualBasic.Core.targets"/>
+    <ROW File="Microsoft.VisualBasic.Core.targets" Component_="csc.exe.config" FileName="MICROS~2.TAR|Microsoft.VisualBasic.Core.targets" Attributes="0" SourcePath="..\src\Svenkle.NuGetServer.Service\bin\Release\Website\bin\roslyn\Microsoft.VisualBasic.Core.targets" SelfReg="false" NextFile="Microsoft.Win32.Primitives.dll"/>
+    <ROW File="Microsoft.Web.Infrastructure.dll" Component_="Microsoft.Web.Infrastructure.dll" FileName="MICROS~2.DLL|Microsoft.Web.Infrastructure.dll" Attributes="0" SourcePath="..\src\Svenkle.NuGetServer.Service\bin\Release\Website\bin\Microsoft.Web.Infrastructure.dll" SelfReg="false" NextFile="Microsoft.Web.XmlTransform.dll"/>
+    <ROW File="Microsoft.Web.XmlTransform.dll" Component_="Microsoft.Web.XmlTransform.dll" FileName="MICROS~3.DLL|Microsoft.Web.XmlTransform.dll" Attributes="0" SourcePath="..\src\Svenkle.NuGetServer.Service\bin\Release\Website\bin\Microsoft.Web.XmlTransform.dll" SelfReg="false" NextFile="Newtonsoft.Json.dll"/>
+    <ROW File="Microsoft.Win32.Primitives.dll" Component_="Microsoft.Win32.Primitives.dll" FileName="MICROS~9.DLL|Microsoft.Win32.Primitives.dll" Attributes="0" SourcePath="..\src\Svenkle.NuGetServer.Service\bin\Release\Website\bin\roslyn\Microsoft.Win32.Primitives.dll" SelfReg="false" NextFile="System.AppContext.dll"/>
+    <ROW File="Newtonsoft.Json.dll" Component_="Newtonsoft.Json.dll" FileName="NEWTON~1.DLL|Newtonsoft.Json.dll" Attributes="0" SourcePath="..\src\Svenkle.NuGetServer.Service\bin\Release\Website\bin\Newtonsoft.Json.dll" SelfReg="false" NextFile="NuGet.Core.dll"/>
+    <ROW File="NuGet.Core.dll" Component_="NuGet.Core.dll" FileName="NUGETC~1.DLL|NuGet.Core.dll" Attributes="0" SourcePath="..\src\Svenkle.NuGetServer.Service\bin\Release\Website\bin\NuGet.Core.dll" SelfReg="false" NextFile="NuGet.Server.dll"/>
+    <ROW File="NuGet.Server.dll" Component_="NuGet.Server.dll" FileName="NUGETS~1.DLL|NuGet.Server.dll" Attributes="0" SourcePath="..\src\Svenkle.NuGetServer.Service\bin\Release\Website\bin\NuGet.Server.dll" SelfReg="false" NextFile="csc.exe"/>
+    <ROW File="Packages.svc" Component_="Packages.svc" FileName="Packages.svc" Attributes="0" SourcePath="..\src\Svenkle.NuGetServer.Service\bin\Release\Website\DataServices\Packages.svc" SelfReg="false" NextFile="Default.aspx"/>
+    <ROW File="Readme.txt" Component_="Readme.txt" FileName="Readme.txt" Attributes="0" SourcePath="..\src\Svenkle.NuGetServer.Service\bin\Release\Website\Packages\Readme.txt" SelfReg="false" NextFile="packages.config"/>
+    <ROW File="RouteMagic.dll" Component_="RouteMagic.dll" FileName="ROUTEM~1.DLL|RouteMagic.dll" Attributes="0" SourcePath="..\src\Svenkle.NuGetServer.Service\bin\Release\Website\bin\RouteMagic.dll" SelfReg="false" NextFile="Svenkle.NuGetServer.Website.dll"/>
+    <ROW File="Svenkle.NuGetServer.Service.exe" Component_="Svenkle.NuGetServer.Service.exe" FileName="SVENKL~1.EXE|Svenkle.NuGetServer.Service.exe" Attributes="0" SourcePath="..\src\Svenkle.NuGetServer.Service\bin\Release\Svenkle.NuGetServer.Service.exe" SelfReg="false" NextFile="Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll" DigSign="true"/>
+    <ROW File="Svenkle.NuGetServer.Service.exe.config" Component_="Svenkle.NuGetServer.Service.exe.config" FileName="SVENKL~1.CON|Svenkle.NuGetServer.Service.exe.config" Attributes="0" SourcePath="..\src\Svenkle.NuGetServer.Service\bin\Release\Svenkle.NuGetServer.Service.exe.config" SelfReg="false"/>
+    <ROW File="Svenkle.NuGetServer.Website.dll" Component_="Svenkle.NuGetServer.Website.dll" FileName="SVENKL~1.DLL|Svenkle.NuGetServer.Website.dll" Attributes="0" SourcePath="..\src\Svenkle.NuGetServer.Service\bin\Release\Website\bin\Svenkle.NuGetServer.Website.dll" SelfReg="false" NextFile="WebActivatorEx.dll"/>
+    <ROW File="System.AppContext.dll" Component_="System.AppContext.dll" FileName="SYSTEM~1.DLL|System.AppContext.dll" Attributes="0" SourcePath="..\src\Svenkle.NuGetServer.Service\bin\Release\Website\bin\roslyn\System.AppContext.dll" SelfReg="false" NextFile="System.Collections.Immutable.dll"/>
+    <ROW File="System.Collections.Immutable.dll" Component_="System.Collections.Immutable.dll" FileName="SYSTEM~2.DLL|System.Collections.Immutable.dll" Attributes="0" SourcePath="..\src\Svenkle.NuGetServer.Service\bin\Release\Website\bin\roslyn\System.Collections.Immutable.dll" SelfReg="false" NextFile="System.Console.dll"/>
+    <ROW File="System.Console.dll" Component_="System.Console.dll" FileName="SYSTEM~3.DLL|System.Console.dll" Attributes="0" SourcePath="..\src\Svenkle.NuGetServer.Service\bin\Release\Website\bin\roslyn\System.Console.dll" SelfReg="false" NextFile="System.Diagnostics.FileVersionInfo.dll"/>
+    <ROW File="System.Diagnostics.FileVersionInfo.dll" Component_="System.Diagnostics.FileVersionInfo.dll" FileName="SYSTEM~4.DLL|System.Diagnostics.FileVersionInfo.dll" Attributes="0" SourcePath="..\src\Svenkle.NuGetServer.Service\bin\Release\Website\bin\roslyn\System.Diagnostics.FileVersionInfo.dll" SelfReg="false" NextFile="System.Diagnostics.Process.dll"/>
+    <ROW File="System.Diagnostics.Process.dll" Component_="System.Diagnostics.Process.dll" FileName="SYSTEM~5.DLL|System.Diagnostics.Process.dll" Attributes="0" SourcePath="..\src\Svenkle.NuGetServer.Service\bin\Release\Website\bin\roslyn\System.Diagnostics.Process.dll" SelfReg="false" NextFile="System.Diagnostics.StackTrace.dll"/>
+    <ROW File="System.Diagnostics.StackTrace.dll" Component_="System.Diagnostics.StackTrace.dll" FileName="SYSTEM~6.DLL|System.Diagnostics.StackTrace.dll" Attributes="0" SourcePath="..\src\Svenkle.NuGetServer.Service\bin\Release\Website\bin\roslyn\System.Diagnostics.StackTrace.dll" SelfReg="false" NextFile="System.IO.Compression.dll"/>
+    <ROW File="System.IO.Compression.dll" Component_="System.IO.Compression.dll" FileName="SYSTEM~7.DLL|System.IO.Compression.dll" Attributes="0" SourcePath="..\src\Svenkle.NuGetServer.Service\bin\Release\Website\bin\roslyn\System.IO.Compression.dll" SelfReg="false" NextFile="System.IO.FileSystem.dll"/>
+    <ROW File="System.IO.FileSystem.DriveInfo.dll" Component_="System.IO.FileSystem.DriveInfo.dll" FileName="SYSTEM~9.DLL|System.IO.FileSystem.DriveInfo.dll" Attributes="0" SourcePath="..\src\Svenkle.NuGetServer.Service\bin\Release\Website\bin\roslyn\System.IO.FileSystem.DriveInfo.dll" SelfReg="false" NextFile="System.IO.FileSystem.Primitives.dll"/>
+    <ROW File="System.IO.FileSystem.Primitives.dll" Component_="System.IO.FileSystem.Primitives.dll" FileName="SYSTE~10.DLL|System.IO.FileSystem.Primitives.dll" Attributes="0" SourcePath="..\src\Svenkle.NuGetServer.Service\bin\Release\Website\bin\roslyn\System.IO.FileSystem.Primitives.dll" SelfReg="false" NextFile="System.IO.Pipes.dll"/>
+    <ROW File="System.IO.FileSystem.dll" Component_="System.IO.FileSystem.dll" FileName="SYSTEM~8.DLL|System.IO.FileSystem.dll" Attributes="0" SourcePath="..\src\Svenkle.NuGetServer.Service\bin\Release\Website\bin\roslyn\System.IO.FileSystem.dll" SelfReg="false" NextFile="System.IO.FileSystem.DriveInfo.dll"/>
+    <ROW File="System.IO.Pipes.dll" Component_="System.IO.Pipes.dll" FileName="SYSTE~11.DLL|System.IO.Pipes.dll" Attributes="0" SourcePath="..\src\Svenkle.NuGetServer.Service\bin\Release\Website\bin\roslyn\System.IO.Pipes.dll" SelfReg="false" NextFile="System.Reflection.Metadata.dll"/>
+    <ROW File="System.Reflection.Metadata.dll" Component_="System.Reflection.Metadata.dll" FileName="SYSTE~12.DLL|System.Reflection.Metadata.dll" Attributes="0" SourcePath="..\src\Svenkle.NuGetServer.Service\bin\Release\Website\bin\roslyn\System.Reflection.Metadata.dll" SelfReg="false" NextFile="System.Security.AccessControl.dll"/>
+    <ROW File="System.Security.AccessControl.dll" Component_="System.Security.AccessControl.dll" FileName="SYSTE~13.DLL|System.Security.AccessControl.dll" Attributes="0" SourcePath="..\src\Svenkle.NuGetServer.Service\bin\Release\Website\bin\roslyn\System.Security.AccessControl.dll" SelfReg="false" NextFile="System.Security.Claims.dll"/>
+    <ROW File="System.Security.Claims.dll" Component_="System.Security.Claims.dll" FileName="SYSTE~14.DLL|System.Security.Claims.dll" Attributes="0" SourcePath="..\src\Svenkle.NuGetServer.Service\bin\Release\Website\bin\roslyn\System.Security.Claims.dll" SelfReg="false" NextFile="System.Security.Cryptography.Algorithms.dll"/>
+    <ROW File="System.Security.Cryptography.Algorithms.dll" Component_="System.Security.Cryptography.Algorithms." FileName="SYSTE~15.DLL|System.Security.Cryptography.Algorithms.dll" Attributes="0" SourcePath="..\src\Svenkle.NuGetServer.Service\bin\Release\Website\bin\roslyn\System.Security.Cryptography.Algorithms.dll" SelfReg="false" NextFile="System.Security.Cryptography.Encoding.dll"/>
+    <ROW File="System.Security.Cryptography.Encoding.dll" Component_="System.Security.Cryptography.Encoding.dl" FileName="SYSTE~16.DLL|System.Security.Cryptography.Encoding.dll" Attributes="0" SourcePath="..\src\Svenkle.NuGetServer.Service\bin\Release\Website\bin\roslyn\System.Security.Cryptography.Encoding.dll" SelfReg="false" NextFile="System.Security.Cryptography.Primitives.dll"/>
+    <ROW File="System.Security.Cryptography.Primitives.dll" Component_="System.Security.Cryptography.Primitives." FileName="SYSTE~17.DLL|System.Security.Cryptography.Primitives.dll" Attributes="0" SourcePath="..\src\Svenkle.NuGetServer.Service\bin\Release\Website\bin\roslyn\System.Security.Cryptography.Primitives.dll" SelfReg="false" NextFile="System.Security.Cryptography.X509Certificates.dll"/>
+    <ROW File="System.Security.Cryptography.X509Certificates.dll" Component_="System.Security.Cryptography.X509Certifi" FileName="SYSTE~18.DLL|System.Security.Cryptography.X509Certificates.dll" Attributes="0" SourcePath="..\src\Svenkle.NuGetServer.Service\bin\Release\Website\bin\roslyn\System.Security.Cryptography.X509Certificates.dll" SelfReg="false" NextFile="System.Security.Principal.Windows.dll"/>
+    <ROW File="System.Security.Principal.Windows.dll" Component_="System.Security.Principal.Windows.dll" FileName="SYSTE~19.DLL|System.Security.Principal.Windows.dll" Attributes="0" SourcePath="..\src\Svenkle.NuGetServer.Service\bin\Release\Website\bin\roslyn\System.Security.Principal.Windows.dll" SelfReg="false" NextFile="System.Text.Encoding.CodePages.dll"/>
+    <ROW File="System.Text.Encoding.CodePages.dll" Component_="System.Text.Encoding.CodePages.dll" FileName="SYSTE~20.DLL|System.Text.Encoding.CodePages.dll" Attributes="0" SourcePath="..\src\Svenkle.NuGetServer.Service\bin\Release\Website\bin\roslyn\System.Text.Encoding.CodePages.dll" SelfReg="false" NextFile="System.Threading.Thread.dll"/>
+    <ROW File="System.Threading.Thread.dll" Component_="System.Threading.Thread.dll" FileName="SYSTE~21.DLL|System.Threading.Thread.dll" Attributes="0" SourcePath="..\src\Svenkle.NuGetServer.Service\bin\Release\Website\bin\roslyn\System.Threading.Thread.dll" SelfReg="false" NextFile="System.ValueTuple.dll"/>
+    <ROW File="System.ValueTuple.dll" Component_="System.ValueTuple.dll" FileName="SYSTE~22.DLL|System.ValueTuple.dll" Attributes="0" SourcePath="..\src\Svenkle.NuGetServer.Service\bin\Release\Website\bin\roslyn\System.ValueTuple.dll" SelfReg="false" NextFile="System.Xml.ReaderWriter.dll"/>
+    <ROW File="System.Xml.ReaderWriter.dll" Component_="System.Xml.ReaderWriter.dll" FileName="SYSTE~23.DLL|System.Xml.ReaderWriter.dll" Attributes="0" SourcePath="..\src\Svenkle.NuGetServer.Service\bin\Release\Website\bin\roslyn\System.Xml.ReaderWriter.dll" SelfReg="false" NextFile="System.Xml.XmlDocument.dll"/>
+    <ROW File="System.Xml.XPath.XDocument.dll" Component_="System.Xml.XPath.XDocument.dll" FileName="SYSTE~26.DLL|System.Xml.XPath.XDocument.dll" Attributes="0" SourcePath="..\src\Svenkle.NuGetServer.Service\bin\Release\Website\bin\roslyn\System.Xml.XPath.XDocument.dll" SelfReg="false" NextFile="vbc.exe"/>
+    <ROW File="System.Xml.XPath.dll" Component_="System.Xml.XPath.dll" FileName="SYSTE~25.DLL|System.Xml.XPath.dll" Attributes="0" SourcePath="..\src\Svenkle.NuGetServer.Service\bin\Release\Website\bin\roslyn\System.Xml.XPath.dll" SelfReg="false" NextFile="System.Xml.XPath.XDocument.dll"/>
+    <ROW File="System.Xml.XmlDocument.dll" Component_="System.Xml.XmlDocument.dll" FileName="SYSTE~24.DLL|System.Xml.XmlDocument.dll" Attributes="0" SourcePath="..\src\Svenkle.NuGetServer.Service\bin\Release\Website\bin\roslyn\System.Xml.XmlDocument.dll" SelfReg="false" NextFile="System.Xml.XPath.dll"/>
+    <ROW File="VBCSCompiler.exe" Component_="VBCSCompiler.exe" FileName="VBCSCO~1.EXE|VBCSCompiler.exe" Attributes="0" SourcePath="..\src\Svenkle.NuGetServer.Service\bin\Release\Website\bin\roslyn\VBCSCompiler.exe" SelfReg="false" NextFile="VBCSCompiler.exe.config" DigSign="true"/>
+    <ROW File="VBCSCompiler.exe.config" Component_="csc.exe.config" FileName="VBCSCO~1.CON|VBCSCompiler.exe.config" Attributes="0" SourcePath="..\src\Svenkle.NuGetServer.Service\bin\Release\Website\bin\roslyn\VBCSCompiler.exe.config" SelfReg="false" NextFile="RouteMagic.dll"/>
+    <ROW File="Web.config" Component_="Default.aspx" FileName="WEB~1.CON|Web.config" Attributes="0" SourcePath="..\src\Svenkle.NuGetServer.Service\bin\Release\Website\Web.config" SelfReg="false" NextFile="Svenkle.NuGetServer.Service.exe.config"/>
+    <ROW File="WebActivatorEx.dll" Component_="WebActivatorEx.dll" FileName="WEBACT~1.DLL|WebActivatorEx.dll" Attributes="0" SourcePath="..\src\Svenkle.NuGetServer.Service\bin\Release\Website\bin\WebActivatorEx.dll" SelfReg="false" NextFile="Packages.svc"/>
+    <ROW File="csc.exe" Component_="csc.exe" FileName="csc.exe" Attributes="0" SourcePath="..\src\Svenkle.NuGetServer.Service\bin\Release\Website\bin\roslyn\csc.exe" SelfReg="false" NextFile="csc.exe.config" DigSign="true"/>
+    <ROW File="csc.exe.config" Component_="csc.exe.config" FileName="CSCEXE~1.CON|csc.exe.config" Attributes="0" SourcePath="..\src\Svenkle.NuGetServer.Service\bin\Release\Website\bin\roslyn\csc.exe.config" SelfReg="false" NextFile="csc.rsp"/>
+    <ROW File="csc.rsp" Component_="csc.exe.config" FileName="csc.rsp" Attributes="0" SourcePath="..\src\Svenkle.NuGetServer.Service\bin\Release\Website\bin\roslyn\csc.rsp" SelfReg="false" NextFile="csi.exe"/>
+    <ROW File="csi.exe" Component_="csi.exe" FileName="csi.exe" Attributes="0" SourcePath="..\src\Svenkle.NuGetServer.Service\bin\Release\Website\bin\roslyn\csi.exe" SelfReg="false" NextFile="csi.exe.config" DigSign="true"/>
+    <ROW File="csi.exe.config" Component_="csc.exe.config" FileName="CSIEXE~1.CON|csi.exe.config" Attributes="0" SourcePath="..\src\Svenkle.NuGetServer.Service\bin\Release\Website\bin\roslyn\csi.exe.config" SelfReg="false" NextFile="csi.rsp"/>
+    <ROW File="csi.rsp" Component_="csc.exe.config" FileName="csi.rsp" Attributes="0" SourcePath="..\src\Svenkle.NuGetServer.Service\bin\Release\Website\bin\roslyn\csi.rsp" SelfReg="false" NextFile="Microsoft.Build.Tasks.CodeAnalysis.dll"/>
+    <ROW File="favicon.ico" Component_="Default.aspx" FileName="favicon.ico" Attributes="0" SourcePath="..\src\Svenkle.NuGetServer.Service\bin\Release\Website\favicon.ico" SelfReg="false" NextFile="Readme.txt"/>
+    <ROW File="packages.config" Component_="Default.aspx" FileName="PACKAG~1.CON|packages.config" Attributes="0" SourcePath="..\src\Svenkle.NuGetServer.Service\bin\Release\Website\packages.config" SelfReg="false" NextFile="Web.config"/>
+    <ROW File="vbc.exe" Component_="vbc.exe" FileName="vbc.exe" Attributes="0" SourcePath="..\src\Svenkle.NuGetServer.Service\bin\Release\Website\bin\roslyn\vbc.exe" SelfReg="false" NextFile="vbc.exe.config" DigSign="true"/>
+    <ROW File="vbc.exe.config" Component_="csc.exe.config" FileName="VBCEXE~1.CON|vbc.exe.config" Attributes="0" SourcePath="..\src\Svenkle.NuGetServer.Service\bin\Release\Website\bin\roslyn\vbc.exe.config" SelfReg="false" NextFile="vbc.rsp"/>
+    <ROW File="vbc.rsp" Component_="csc.exe.config" FileName="vbc.rsp" Attributes="0" SourcePath="..\src\Svenkle.NuGetServer.Service\bin\Release\Website\bin\roslyn\vbc.rsp" SelfReg="false" NextFile="VBCSCompiler.exe"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.BuildComponent">
+    <ROW BuildKey="DefaultBuild" BuildName="DefaultBuild" BuildOrder="1" BuildType="0" PackageFolder="..\artifacts" PackageFileName="Setup" Languages="en" InstallationType="4" UseLargeSchema="true"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.DictionaryComponent">
+    <ROW Path="&lt;AI_DICTS&gt;ui.ail"/>
+    <ROW Path="&lt;AI_DICTS&gt;ui_en.ail"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.FragmentComponent">
+    <ROW Fragment="CommonUI.aip" Path="&lt;AI_FRAGS&gt;CommonUI.aip"/>
+    <ROW Fragment="FolderDlg.aip" Path="&lt;AI_THEMES&gt;classic\fragments\FolderDlg.aip"/>
+    <ROW Fragment="MaintenanceTypeDlg.aip" Path="&lt;AI_THEMES&gt;classic\fragments\MaintenanceTypeDlg.aip"/>
+    <ROW Fragment="MaintenanceWelcomeDlg.aip" Path="&lt;AI_THEMES&gt;classic\fragments\MaintenanceWelcomeDlg.aip"/>
+    <ROW Fragment="SequenceDialogs.aip" Path="&lt;AI_THEMES&gt;classic\fragments\SequenceDialogs.aip"/>
+    <ROW Fragment="Sequences.aip" Path="&lt;AI_FRAGS&gt;Sequences.aip"/>
+    <ROW Fragment="StaticUIStrings.aip" Path="&lt;AI_FRAGS&gt;StaticUIStrings.aip"/>
+    <ROW Fragment="UI.aip" Path="&lt;AI_THEMES&gt;classic\fragments\UI.aip"/>
+    <ROW Fragment="Validation.aip" Path="&lt;AI_FRAGS&gt;Validation.aip"/>
+    <ROW Fragment="VerifyRemoveDlg.aip" Path="&lt;AI_THEMES&gt;classic\fragments\VerifyRemoveDlg.aip"/>
+    <ROW Fragment="VerifyRepairDlg.aip" Path="&lt;AI_THEMES&gt;classic\fragments\VerifyRepairDlg.aip"/>
+    <ROW Fragment="WelcomeDlg.aip" Path="&lt;AI_THEMES&gt;classic\fragments\WelcomeDlg.aip"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiBinaryComponent">
+    <ROW Name="aicustact.dll" SourcePath="&lt;AI_CUSTACTS&gt;aicustact.dll"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiControlEventComponent">
+    <ROW Dialog_="WelcomeDlg" Control_="Next" Event="NewDialog" Argument="FolderDlg" Condition="AI_INSTALL" Ordering="1"/>
+    <ROW Dialog_="FolderDlg" Control_="Next" Event="NewDialog" Argument="VerifyReadyDlg" Condition="AI_INSTALL" Ordering="201"/>
+    <ROW Dialog_="FolderDlg" Control_="Back" Event="NewDialog" Argument="WelcomeDlg" Condition="AI_INSTALL" Ordering="1"/>
+    <ROW Dialog_="MaintenanceWelcomeDlg" Control_="Next" Event="NewDialog" Argument="MaintenanceTypeDlg" Condition="AI_MAINT" Ordering="99"/>
+    <ROW Dialog_="VerifyReadyDlg" Control_="Install" Event="EndDialog" Argument="Return" Condition="AI_MAINT" Ordering="198"/>
+    <ROW Dialog_="VerifyReadyDlg" Control_="Back" Event="NewDialog" Argument="CustomizeDlg" Condition="AI_MAINT" Ordering="202"/>
+    <ROW Dialog_="VerifyReadyDlg" Control_="Install" Event="EndDialog" Argument="Return" Condition="AI_INSTALL" Ordering="197"/>
+    <ROW Dialog_="VerifyReadyDlg" Control_="Back" Event="NewDialog" Argument="FolderDlg" Condition="AI_INSTALL" Ordering="201"/>
+    <ROW Dialog_="CustomizeDlg" Control_="Next" Event="NewDialog" Argument="VerifyReadyDlg" Condition="AI_MAINT" Ordering="101"/>
+    <ROW Dialog_="CustomizeDlg" Control_="Back" Event="NewDialog" Argument="MaintenanceTypeDlg" Condition="AI_MAINT" Ordering="1"/>
+    <ROW Dialog_="MaintenanceTypeDlg" Control_="ChangeButton" Event="NewDialog" Argument="CustomizeDlg" Condition="AI_MAINT" Ordering="501"/>
+    <ROW Dialog_="MaintenanceTypeDlg" Control_="Back" Event="NewDialog" Argument="MaintenanceWelcomeDlg" Condition="AI_MAINT" Ordering="1"/>
+    <ROW Dialog_="MaintenanceTypeDlg" Control_="RemoveButton" Event="NewDialog" Argument="VerifyRemoveDlg" Condition="AI_MAINT AND InstallMode=&quot;Remove&quot;" Ordering="601"/>
+    <ROW Dialog_="VerifyRemoveDlg" Control_="Back" Event="NewDialog" Argument="MaintenanceTypeDlg" Condition="AI_MAINT AND InstallMode=&quot;Remove&quot;" Ordering="1"/>
+    <ROW Dialog_="MaintenanceTypeDlg" Control_="RepairButton" Event="NewDialog" Argument="VerifyRepairDlg" Condition="AI_MAINT AND InstallMode=&quot;Repair&quot;" Ordering="601"/>
+    <ROW Dialog_="VerifyRepairDlg" Control_="Back" Event="NewDialog" Argument="MaintenanceTypeDlg" Condition="AI_MAINT AND InstallMode=&quot;Repair&quot;" Ordering="1"/>
+    <ROW Dialog_="VerifyRepairDlg" Control_="Repair" Event="EndDialog" Argument="Return" Condition="AI_MAINT AND InstallMode=&quot;Repair&quot;" Ordering="399" Options="1"/>
+    <ROW Dialog_="VerifyRemoveDlg" Control_="Remove" Event="EndDialog" Argument="Return" Condition="AI_MAINT AND InstallMode=&quot;Remove&quot;" Ordering="299" Options="1"/>
+    <ROW Dialog_="PatchWelcomeDlg" Control_="Next" Event="NewDialog" Argument="VerifyReadyDlg" Condition="AI_PATCH" Ordering="201"/>
+    <ROW Dialog_="ResumeDlg" Control_="Install" Event="EndDialog" Argument="Return" Condition="AI_RESUME" Ordering="299"/>
+    <ROW Dialog_="VerifyReadyDlg" Control_="Install" Event="EndDialog" Argument="Return" Condition="AI_PATCH" Ordering="199"/>
+    <ROW Dialog_="VerifyReadyDlg" Control_="Back" Event="NewDialog" Argument="PatchWelcomeDlg" Condition="AI_PATCH" Ordering="203"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiCustActComponent">
+    <ROW Action="AI_DOWNGRADE" Type="19" Target="4010"/>
+    <ROW Action="AI_DpiContentScale" Type="1" Source="aicustact.dll" Target="DpiContentScale"/>
+    <ROW Action="AI_EnableDebugLog" Type="321" Source="aicustact.dll" Target="EnableDebugLog"/>
+    <ROW Action="AI_InstallModeCheck" Type="1" Source="aicustact.dll" Target="UpdateInstallMode" WithoutSeq="true"/>
+    <ROW Action="AI_PREPARE_UPGRADE" Type="65" Source="aicustact.dll" Target="PrepareUpgrade"/>
+    <ROW Action="AI_RESTORE_LOCATION" Type="65" Source="aicustact.dll" Target="RestoreLocation"/>
+    <ROW Action="AI_ResolveKnownFolders" Type="1" Source="aicustact.dll" Target="AI_ResolveKnownFolders"/>
+    <ROW Action="AI_SHOW_LOG" Type="65" Source="aicustact.dll" Target="LaunchLogFile" WithoutSeq="true"/>
+    <ROW Action="AI_STORE_LOCATION" Type="51" Source="ARPINSTALLLOCATION" Target="[APPDIR]"/>
+    <ROW Action="SET_APPDIR" Type="307" Source="APPDIR" Target="[ProgramFilesFolder][Manufacturer]\[ProductName]"/>
+    <ROW Action="SET_SHORTCUTDIR" Type="307" Source="SHORTCUTDIR" Target="[ProgramMenuFolder][ProductName]"/>
+    <ROW Action="SET_TARGETDIR_TO_APPDIR" Type="51" Source="TARGETDIR" Target="[APPDIR]"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiInstExSeqComponent">
+    <ROW Action="AI_RESTORE_LOCATION" Condition="APPDIR=&quot;&quot;" Sequence="749"/>
+    <ROW Action="AI_STORE_LOCATION" Condition="(Not Installed) OR REINSTALL" Sequence="1501"/>
+    <ROW Action="AI_PREPARE_UPGRADE" Condition="AI_UPGRADE=&quot;No&quot; AND (Not Installed)" Sequence="1399"/>
+    <ROW Action="AI_ResolveKnownFolders" Sequence="52"/>
+    <ROW Action="AI_EnableDebugLog" Sequence="51"/>
+    <ROW Action="AI_DOWNGRADE" Condition="AI_NEWERPRODUCTFOUND AND (UILevel &lt;&gt; 5)" Sequence="201"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiInstallUISequenceComponent">
+    <ROW Action="AI_RESTORE_LOCATION" Condition="APPDIR=&quot;&quot;" Sequence="749"/>
+    <ROW Action="AI_ResolveKnownFolders" Sequence="53"/>
+    <ROW Action="AI_DpiContentScale" Sequence="52"/>
+    <ROW Action="AI_EnableDebugLog" Sequence="51"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiLaunchConditionsComponent">
+    <ROW Condition="( Version9X OR ( NOT VersionNT64 ) OR ( VersionNT64 AND ((VersionNT64 &lt;&gt; 502) OR (ServicePackLevel &lt;&gt; 2) OR (MsiNTProductType &lt;&gt; 1)) AND ((VersionNT64 &lt;&gt; 502) OR (ServicePackLevel &lt;&gt; 2) OR (MsiNTProductType = 1)) AND ((VersionNT64 &lt;&gt; 600) OR (ServicePackLevel &lt;&gt; 0) OR (MsiNTProductType &lt;&gt; 1)) AND ((VersionNT64 &lt;&gt; 600) OR (ServicePackLevel &lt;&gt; 1) OR (MsiNTProductType &lt;&gt; 1)) AND ((VersionNT64 &lt;&gt; 600) OR (ServicePackLevel &lt;&gt; 2) OR (MsiNTProductType &lt;&gt; 1)) AND ((VersionNT64 &lt;&gt; 600) OR (MsiNTProductType = 1)) ) )" Description="[ProductName] cannot be installed on the following Windows versions: [WindowsTypeNT64Display]." DescriptionLocId="AI.LaunchCondition.NoSpecificNT64" IsPredefined="true" Builds="DefaultBuild"/>
+    <ROW Condition="( Version9X OR VersionNT64 OR ( VersionNT AND ((VersionNT &lt;&gt; 501) OR (ServicePackLevel &lt;&gt; 3)) AND ((VersionNT &lt;&gt; 502) OR (ServicePackLevel &lt;&gt; 2)) AND ((VersionNT &lt;&gt; 600) OR (ServicePackLevel &lt;&gt; 0) OR (MsiNTProductType &lt;&gt; 1)) AND ((VersionNT &lt;&gt; 600) OR (ServicePackLevel &lt;&gt; 1) OR (MsiNTProductType &lt;&gt; 1)) AND ((VersionNT &lt;&gt; 600) OR (ServicePackLevel &lt;&gt; 2) OR (MsiNTProductType &lt;&gt; 1)) AND ((VersionNT &lt;&gt; 600) OR (MsiNTProductType = 1)) ) )" Description="[ProductName] cannot be installed on the following Windows versions: [WindowsTypeNTDisplay]." DescriptionLocId="AI.LaunchCondition.NoSpecificNT" IsPredefined="true" Builds="DefaultBuild"/>
+    <ROW Condition="(VersionNT &lt;&gt; 400)" Description="[ProductName] cannot be installed on [WindowsTypeNT40Display]." DescriptionLocId="AI.LaunchCondition.NoNT40" IsPredefined="true" Builds="DefaultBuild"/>
+    <ROW Condition="(VersionNT &lt;&gt; 500)" Description="[ProductName] cannot be installed on [WindowsTypeNT50Display]." DescriptionLocId="AI.LaunchCondition.NoNT50" IsPredefined="true" Builds="DefaultBuild"/>
+    <ROW Condition="(VersionNT64 OR ((VersionNT &lt;&gt; 501) OR (ServicePackLevel = 3))) AND ((VersionNT &lt;&gt; 502) OR (ServicePackLevel = 2))" Description="[ProductName] cannot be installed on [WindowsTypeNT5XDisplay]." DescriptionLocId="AI.LaunchCondition.NoNT5X" IsPredefined="true" Builds="DefaultBuild"/>
+    <ROW Condition="VersionNT" Description="[ProductName] cannot be installed on [WindowsType9XDisplay]." DescriptionLocId="AI.LaunchCondition.No9X" IsPredefined="true" Builds="DefaultBuild"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiRegsComponent">
+    <ROW Registry="CurrentControlSet" Root="2" Key="SYSTEM\CurrentControlSet" Name="+" Component_="CurrentControlSet"/>
+    <ROW Registry="DelayedAutostart" Root="2" Key="SYSTEM\CurrentControlSet\Services\NuGetServer" Name="DelayedAutostart" Value="#0" Component_="DelayedAutostart"/>
+    <ROW Registry="Description" Root="2" Key="SYSTEM\CurrentControlSet\Services\NuGetServer" Name="Description" Value="Manages an IIS Express instance running a Nuget.Server website" Component_="Description"/>
+    <ROW Registry="DisplayName" Root="2" Key="SYSTEM\CurrentControlSet\Services\NuGetServer" Name="DisplayName" Value="NuGet Server" Component_="DisplayName"/>
+    <ROW Registry="ErrorControl" Root="2" Key="SYSTEM\CurrentControlSet\Services\NuGetServer" Name="ErrorControl" Value="#1" Component_="ErrorControl"/>
+    <ROW Registry="ImagePath" Root="2" Key="SYSTEM\CurrentControlSet\Services\NuGetServer" Name="ImagePath" Value="&quot;[#Svenkle.NuGetServer.Service.exe]&quot;  -displayname &quot;NuGet Server&quot; -servicename &quot;NuGetServer&quot;" Component_="ImagePath"/>
+    <ROW Registry="NuGetServer" Root="2" Key="SYSTEM\CurrentControlSet\Services\NuGetServer" Name="*" Component_="NuGetServer"/>
+    <ROW Registry="ObjectName" Root="2" Key="SYSTEM\CurrentControlSet\Services\NuGetServer" Name="ObjectName" Value="LocalSystem" Component_="ObjectName"/>
+    <ROW Registry="SYSTEM" Root="2" Key="SYSTEM" Name="+" Component_="SYSTEM"/>
+    <ROW Registry="Services" Root="2" Key="SYSTEM\CurrentControlSet\Services" Name="+" Component_="Services"/>
+    <ROW Registry="Start" Root="2" Key="SYSTEM\CurrentControlSet\Services\NuGetServer" Name="Start" Value="#2" Component_="Start"/>
+    <ROW Registry="Type" Root="2" Key="SYSTEM\CurrentControlSet\Services\NuGetServer" Name="Type" Value="#16" Component_="Type"/>
+    <ROW Registry="WOW64" Root="2" Key="SYSTEM\CurrentControlSet\Services\NuGetServer" Name="WOW64" Value="#1" Component_="WOW64"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiThemeComponent">
+    <ATTRIBUTE name="UsedTheme" value="classic"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiUpgradeComponent">
+    <ROW UpgradeCode="[|UpgradeCode]" VersionMin="0.0.1" VersionMax="[|ProductVersion]" Attributes="257" ActionProperty="OLDPRODUCTS"/>
+    <ROW UpgradeCode="[|UpgradeCode]" VersionMin="[|ProductVersion]" Attributes="2" ActionProperty="AI_NEWERPRODUCTFOUND"/>
+  </COMPONENT>
+</DOCUMENT>
