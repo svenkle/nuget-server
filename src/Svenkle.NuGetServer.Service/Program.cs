@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Configuration;
 using System.Diagnostics;
 using System.IO;
 using System.ServiceProcess;
@@ -11,29 +10,30 @@ namespace Svenkle.NuGetServer.Service
     {
         private Process _hostRunnerProcess;
         private ProcessStartInfo _hostRunnerProcessStartInfo;
-        private const string TempFolderName = "NuGetServer";
-        private const string WebsiteFolderName = "Website";
-        private const string HostRunnerFolderName = "IIS Express";
-        private const string HostRunnerExecutableFilename = "iisexpress.exe";
-        private const string HostRunnerInstallationFilename = "iisexpress.msi";
-        private const string HostRunnerConfigurationFolderName = "user";
-        private string _temporaryPath;
-        private string _rootFolderPath;
-        private string _hostFolderPath;
-        private string _websiteFolderPath;
-        private string _hostInstanceConfigurationPath;
-        private string _hostInstanceFilePath;
-        private string _hostRunnerArguments;
-        private int _port;
+        private const string ConfigurationFilename = "Host\\Website\\Configuration\\applicationhost.config";
+        private const string HostInstallerFilename = "Resources\\iisexpress.msi";
+        private const string UserFolder = "Host\\Website\\User";
+        private const string Host = "Host\\iisexpress.exe";
+        private const string WorkingFolder = "NuGetServer";
+        private const string HostFolder = "Host";
+        private string _configurationFile;
+        private string _hostInstaller;
+        private string _hostArguments;
+        private string _workingFolder;
+        private string _userFolder;
+        private string _rootFolder;
+        private string _hostFolder;
+        private string _host;
 
         private static void Main(string[] args)
         {
-
             var service = new Service();
             if (Environment.UserInteractive)
             {
-                Console.WriteLine($"{typeof(Service).Namespace}");
+                Console.WriteLine($@"[{typeof(Service).Namespace}]");
+                Console.WriteLine(@"Starting...");
                 service.OnStart(args);
+                Console.WriteLine(@"Started!");
                 Console.ReadLine();
                 service.Stop();
             }
@@ -48,30 +48,42 @@ namespace Svenkle.NuGetServer.Service
             AppDomain.CurrentDomain.UnhandledException += ServiceOnUnhandledException;
             AppDomain.CurrentDomain.ProcessExit += ServiceOnProcessExit;
 
-            _temporaryPath = Path.Combine(Path.GetTempPath(), TempFolderName);
-            _rootFolderPath = Path.GetDirectoryName(new Uri(typeof(Service).Assembly.CodeBase).LocalPath);
-            _hostFolderPath = Path.Combine(_rootFolderPath, HostRunnerFolderName);
-            _websiteFolderPath = Path.Combine(_rootFolderPath, WebsiteFolderName);
-            _hostInstanceFilePath = Path.Combine(_hostFolderPath, HostRunnerExecutableFilename);
-            _hostInstanceConfigurationPath = Path.Combine(_hostFolderPath, HostRunnerConfigurationFolderName);
+            _rootFolder = Path.GetDirectoryName(new Uri(typeof(Service).Assembly.CodeBase).LocalPath);
+            _configurationFile = Path.Combine(_rootFolder, ConfigurationFilename);
+            _hostInstaller = Path.Combine(_rootFolder, HostInstallerFilename);
+            _workingFolder = Path.Combine(Path.GetTempPath(), WorkingFolder);
+            _userFolder = Path.Combine(_rootFolder, UserFolder);
+            _hostFolder = Path.Combine(_rootFolder, HostFolder);
+            _host = Path.Combine(_rootFolder, Host);
 
-            ExtractHostRunner();
-            ConfigureHostRunner();
-            StartHostRunner();
+            ExtractHost();
+            ConfigureHost();
+            StartHost();
         }
 
         protected override void OnStop()
         {
-            StopHostRunner();
+            StopHost();
         }
 
-        private void StartHostRunner()
+        private void ExtractHost()
+        {
+            if (!File.Exists(_host))
+            {
+                // Use a VB Move command as C# doesn't allow moving between volumes
+                // TODO: Potentially change this as the temp folder is not just for IIS
+                ExtractWindowsInstallPackage(_hostInstaller);
+                FileSystem.MoveDirectory(Path.Combine(_workingFolder, "WowOnly"), _hostFolder, true);
+            }
+        }
+
+        private void StartHost()
         {
             _hostRunnerProcess.Start();
             _hostRunnerProcess.BeginErrorReadLine();
         }
 
-        private void StopHostRunner()
+        private void StopHost()
         {
             if (_hostRunnerProcess != null && !_hostRunnerProcess.HasExited)
             {
@@ -81,29 +93,11 @@ namespace Svenkle.NuGetServer.Service
             }
         }
 
-        private void ExtractHostRunner()
+        private void ConfigureHost()
         {
-            var hostRunnerResourceFilePath = ExtractResource(Resources.iisexpress, HostRunnerInstallationFilename);
-            var extractedHostRunnerTemporaryFolder = ExtractWindowsInstallPackage(hostRunnerResourceFilePath);
-            var extractedHostRunnerFolder = Path.Combine(extractedHostRunnerTemporaryFolder, "WowOnly");
+            _hostArguments = $"/config:\"{_configurationFile}\" /systray:{false} /userhome:\"{_userFolder}\" /trace:error";
 
-            if (!Directory.Exists(_hostFolderPath))
-                Directory.CreateDirectory(_hostFolderPath);
-
-            if (!Directory.Exists(_hostInstanceConfigurationPath))
-                Directory.CreateDirectory(_hostInstanceConfigurationPath);
-
-            // Use a VB Move command as C# doesn't allow moving between volumes
-            FileSystem.MoveDirectory(extractedHostRunnerFolder, _hostFolderPath, true);
-        }
-
-        private void ConfigureHostRunner()
-        {
-            if (!int.TryParse(ConfigurationManager.AppSettings["port"], out _port))
-                _port = 8080;
-
-            _hostRunnerArguments = $"/path:\"{_websiteFolderPath}\" /port:{_port} /systray:{true} /userhome:\"{_hostInstanceConfigurationPath}\" /trace:error";
-            _hostRunnerProcessStartInfo = new ProcessStartInfo(_hostInstanceFilePath, _hostRunnerArguments)
+            _hostRunnerProcessStartInfo = new ProcessStartInfo(_host, _hostArguments)
             {
                 WindowStyle = ProcessWindowStyle.Hidden,
                 UseShellExecute = false,
@@ -131,42 +125,24 @@ namespace Svenkle.NuGetServer.Service
         private void ServiceOnProcessExit(object sender, EventArgs eventArgs)
         {
             Console.WriteLine(nameof(ServiceOnProcessExit));
-            StopHostRunner();
+            StopHost();
         }
 
-        private string ExtractWindowsInstallPackage(string packageFilePath)
+        private void ExtractWindowsInstallPackage(string packageFilePath)
         {
-            var extractedFolderPath = Path.Combine(_temporaryPath, Path.GetFileNameWithoutExtension(packageFilePath));
-            var process = Process.Start("msiexec.exe", $"/a \"{packageFilePath}\" /qb TARGETDIR=\"{extractedFolderPath}\" /quiet");
-            process.WaitForExit();
-            return extractedFolderPath;
-        }
-
-        private string ExtractResource(byte[] resourceData, string resourceName)
-        {
-            if (!Directory.Exists(_temporaryPath))
-                Directory.CreateDirectory(_temporaryPath);
-
-            var extractedFilePath = Path.Combine(_temporaryPath, resourceName);
-
-            using (var stream = new MemoryStream(resourceData))
-            using (var file = File.Create(extractedFilePath))
-            {
-                stream.CopyTo(file);
-                return extractedFilePath;
-            }
+            Process.Start("msiexec.exe", $"/a \"{packageFilePath}\" /qb targetdir=\"{_workingFolder}\" /quiet").WaitForExit();
         }
 
         private void HostRunnerOnErrorDataReceived(object sender, DataReceivedEventArgs dataReceivedEventArgs)
         {
             Console.WriteLine(dataReceivedEventArgs.Data);
-            StopHostRunner();
+            StopHost();
         }
 
         private void ServiceOnUnhandledException(object sender, UnhandledExceptionEventArgs e)
         {
             Console.WriteLine((Exception)e.ExceptionObject);
-            StopHostRunner();
+            StopHost();
         }
     }
 }
