@@ -25,8 +25,8 @@ You can alter the listening port by updating the **port** setting in **Svenkle.N
 You can customise all of the normal NuGet.Server functionality by editing the **Web.config** located in the Website folder under the application root. Further documentation on the configuration settings can be found [here](https://docs.microsoft.com/en-us/nuget/hosting-packages/nuget-server).
 
 ## FAQ
-### Why is this better than the Cassini based NuGet Server
+### Why is this better than the Cassini based NuGet Server?
 It's Simple! This one is free and open-source.
 
-### Why do you bundle IIS Express as an MSI
+### Why do you bundle IIS Express as an MSI?
 In order to increase support for servers that do not have IIS Express installed it must be bundled with the service. The Microsoft license agreement for IIS Express only allows distribution in .msi form.
