@@ -18,15 +18,16 @@ NuGet Server is essentially a self-hosted wrapper of the [NuGet.Server](https://
 * Run **Svenkle.NuGetServer.Service.exe**
 
 ## Configuration
-### Listening Port
-You can alter the listening port by updating the **port** setting in **Svenkle.NuGetServer.Service.exe.config** located in the application root. Please note that server must run with Administrator privledges in order to listen on port **:80**
 
-### API Key, Package Location etc.
+### Host configuration
+You can configure many different features of the host using the **applicationhost.config** file located in **Host\\Website\\Configuration**.
+
+### API Key, Package location etc.
 You can customise all of the normal NuGet.Server functionality by editing the **Web.config** located in the Website folder under the application root. Further documentation on the configuration settings can be found [here](https://docs.microsoft.com/en-us/nuget/hosting-packages/nuget-server).
 
 ## FAQ
-### Why is this better than the Cassini based NuGet Server
-It's Simple! This one is free and open-source.
+### Why is this better than the Cassini based NuGet Server?
+It's simple! This one is free and open-source.
 
-### Why do you bundle IIS Express as an MSI
+### Why do you bundle IIS Express as an MSI?
 In order to increase support for servers that do not have IIS Express installed it must be bundled with the service. The Microsoft license agreement for IIS Express only allows distribution in .msi form.
