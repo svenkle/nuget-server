@@ -1,8 +1,6 @@
 <Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <TransformWebConfigEnabled>True</TransformWebConfigEnabled>
-    <AutoParameterizationWebConfigConnectionStrings>False</AutoParameterizationWebConfigConnectionStrings>
-    <OutputFolder>$(MSBuildProjectDirectory)\..\Svenkle.NuGetServer.Service\bin\$(Configuration)\Website</OutputFolder>
+    <OutputFolder>$(MSBuildProjectDirectory)\..\Svenkle.NuGetServer.Service\bin\$(Configuration)\Host\Website</OutputFolder>
   </PropertyGroup>
   <Target Name="PublishWebsiteToService" AfterTargets="Build" DependsOnTargets="PipelinePreDeployCopyAllFilesToOneFolder">
     <ItemGroup>
@@ -12,5 +10,11 @@
   </Target>
   <Target Name="CleanWebsiteInService" AfterTargets="Clean">
     <RemoveDir Directories="$(OutputFolder)" Condition="Exists('$(OutputFolder)')"/>
+    <ItemGroup>
+      <FilesToRemove Include="$(OutputFolder)\**\*.*" />
+      <FoldersToRemove Include="$([System.IO.Directory]::GetDirectories(&quot;$(OutDir)&quot;))" />
+    </ItemGroup>
+    <Delete Files="@(FilesToRemove)"/>
+    <RemoveDir Directories="@(FoldersToRemove)" />
   </Target>
 </Project>
