@@ -13,7 +13,7 @@
     <ROW Property="ProductCode" Value="1033:{5DB62BA4-A6EB-48D1-8C88-8A5B86609634} " Type="16"/>
     <ROW Property="ProductLanguage" Value="1033"/>
     <ROW Property="ProductName" Value="NuGet Server"/>
-    <ROW Property="ProductVersion" Value="0.0.6330.3654" Type="32" TargetFile="Svenkle.NuGetServer.Service.exe"/>
+    <ROW Property="ProductVersion" Value="0.0.6330.3877" Type="32" TargetFile="Svenkle.NuGetServer.Service.exe"/>
     <ROW Property="SecureCustomProperties" Value="OLDPRODUCTS;AI_NEWERPRODUCTFOUND"/>
     <ROW Property="UpgradeCode" Value="{4C12923C-88E2-4863-A671-5C5E511357AF}"/>
     <ROW Property="WindowsType9X" MultiBuildValue="DefaultBuild:Windows 9x/ME" ValueLocId="-"/>
