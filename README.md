@@ -26,7 +26,7 @@ You can configure many different features of the host using the **applicationhos
 You can customise all of the normal NuGet.Server functionality by editing the **Web.config** located in the Website folder under the application root. Further documentation on the configuration settings can be found [here](https://docs.microsoft.com/en-us/nuget/hosting-packages/nuget-server).
 
 ## FAQ
-### Why is this better than the Cassini based NuGet Server?
+### How is this different to the Cassini based NuGet Server?
 It's simple! This one is free and open-source.
 
 ### Why do you bundle IIS Express as an MSI?
