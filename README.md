@@ -23,7 +23,7 @@ NuGet Server is essentially a self-hosted wrapper of the [NuGet.Server](https://
 You can configure many different features of the host using the **applicationhost.config** file located in **Host\\Website\\Configuration**.
 
 ### API Key, Package location etc.
-You can customise all of the normal NuGet.Server functionality by editing the **Web.config** located in the Website folder under the application root. Further documentation on the configuration settings can be found [here](https://docs.microsoft.com/en-us/nuget/hosting-packages/nuget-server).
+You can customise all of the normal NuGet.Server functionality by editing the **Web.config** located in **Host\\Website**. Further documentation on the configuration settings can be found [here](https://docs.microsoft.com/en-us/nuget/hosting-packages/nuget-server).
 
 ## FAQ
 ### How is this different to the Cassini based NuGet Server?
