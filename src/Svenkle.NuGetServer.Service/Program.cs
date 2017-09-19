@@ -2,6 +2,9 @@
 using System.Diagnostics;
 using System.IO;
 using System.ServiceProcess;
+using System.Configuration.Install;
+using System.Reflection;
+
 using Microsoft.VisualBasic.FileIO;
 
 namespace Svenkle.NuGetServer.Service
@@ -28,19 +31,40 @@ namespace Svenkle.NuGetServer.Service
         private static void Main(string[] args)
         {
             var service = new Service();
+
             if (Environment.UserInteractive)
             {
-                Console.WriteLine($@"[{typeof(Service).Namespace}]");
-                Console.WriteLine(@"Starting...");
-                service.OnStart(args);
-                Console.WriteLine(@"Started!");
-                Console.ReadLine();
-                service.Stop();
+
+                string parameter = string.Concat(args);
+                switch (parameter)
+                {
+                    case "--install":
+                    case "-i":
+                        ManagedInstallerClass.InstallHelper(new string[] { Assembly.GetExecutingAssembly().Location });
+                        break;
+                    case "--uninstall":
+                    case "-u":
+                        ManagedInstallerClass.InstallHelper(new string[] { "/u", Assembly.GetExecutingAssembly().Location });
+                        break;
+                    default:
+                        Console.WriteLine($@"[{typeof(Service).Namespace}]");
+                        Console.WriteLine(@"Starting...");
+                        service.OnStart(args);
+                        Console.WriteLine(@"Started!");
+                        Console.ReadLine();
+                        service.Stop();
+                        break;
+                }
             }
             else
             {
                 Run(service);
             }
+        }
+
+        public Service()
+        {
+            this.ServiceName = "NuGetServer";
         }
 
         protected override void OnStart(string[] args)
