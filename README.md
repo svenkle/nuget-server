@@ -33,5 +33,8 @@ You can customise all of the normal NuGet.Server functionality by editing the **
 ### How is this different to the Cassini based NuGet Server?
 It's simple! This one is free and open-source.
 
+### If you get a Nullreference error when browsning nugets and you are running as a Service
+Change user or give user that runs the service more rights. Perhaps use a dedicated service user?
+
 ### Why do you bundle IIS Express as an MSI?
 In order to increase support for servers that do not have IIS Express installed it must be bundled with the service. The Microsoft license agreement for IIS Express only allows distribution in .msi form.
