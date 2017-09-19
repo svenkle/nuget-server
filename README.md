@@ -18,6 +18,10 @@ NuGet Server is essentially a self-hosted wrapper of the [NuGet.Server](https://
 * Run **Svenkle.NuGetServer.Service.exe**
 
 ## Configuration
+### Install service from Command Line
+* Open command promt as admin
+* Chnage directory do where you installed NuGet Server
+* Run **Svenkle.NuGetServer.Service.exe -i**
 
 ### Host configuration
 You can configure many different features of the host using the **applicationhost.config** file located in **Host\\Website\\Configuration**.
@@ -28,6 +32,9 @@ You can customise all of the normal NuGet.Server functionality by editing the **
 ## FAQ
 ### How is this different to the Cassini based NuGet Server?
 It's simple! This one is free and open-source.
+
+### If you get a Nullreference error when browsning nugets and you are running as a Service
+Change user or give user that runs the service more rights. Perhaps use a dedicated service user?
 
 ### Why do you bundle IIS Express as an MSI?
 In order to increase support for servers that do not have IIS Express installed it must be bundled with the service. The Microsoft license agreement for IIS Express only allows distribution in .msi form.
