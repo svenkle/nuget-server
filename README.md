@@ -18,6 +18,10 @@ NuGet Server is essentially a self-hosted wrapper of the [NuGet.Server](https://
 * Run **Svenkle.NuGetServer.Service.exe**
 
 ## Configuration
+### Install service from Command Line
+* Open command promt as admin
+* Chnage directory do where you installed NuGet Server
+* Run **Svenkle.NuGetServer.Service.exe -i**
 
 ### Host configuration
 You can configure many different features of the host using the **applicationhost.config** file located in **Host\\Website\\Configuration**.
