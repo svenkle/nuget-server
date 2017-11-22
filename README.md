@@ -31,3 +31,8 @@ It's simple! This one is free and open-source.
 
 ### Why do you bundle IIS Express as an MSI?
 In order to increase support for servers that do not have IIS Express installed it must be bundled with the service. The Microsoft license agreement for IIS Express only allows distribution in .msi form.
+
+## Problems and Solutions
+
+### Specified Argument was out of the range of valid values
+This issue is caused by a partial installation of Visual Studio ie. Visual Studio Build Tools. To resolve either install Visual Studio completely, Install IIS Express using the installed .msi or install the full IIS suite.
