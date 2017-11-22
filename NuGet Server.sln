@@ -1,19 +1,19 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.27004.2009
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{50F4F821-6975-48B8-99D1-28536BE4047D}"
+	ProjectSection(SolutionItems) = preProject
+		build\Website.props = build\Website.props
+	EndProjectSection
+EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Svenkle.NuGetServer.Service", "src\Svenkle.NuGetServer.Service\Svenkle.NuGetServer.Service.csproj", "{849C4739-2DC5-4112-97B0-23907F39A44E}"
 	ProjectSection(ProjectDependencies) = postProject
 		{4DBC0822-4CF2-41E3-A3E1-D87C64856985} = {4DBC0822-4CF2-41E3-A3E1-D87C64856985}
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Svenkle.NuGetServer.Website", "src\Svenkle.NuGetServer.Website\Svenkle.NuGetServer.Website.csproj", "{4DBC0822-4CF2-41E3-A3E1-D87C64856985}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{50F4F821-6975-48B8-99D1-28536BE4047D}"
-	ProjectSection(SolutionItems) = preProject
-		build\Website.props = build\Website.props
-	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -32,5 +32,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {59ED5E82-CA50-4729-8F2A-05AB2E98A4DF}
 	EndGlobalSection
 EndGlobal
