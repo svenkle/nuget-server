@@ -9,11 +9,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Svenkle.NuGetServer.Service", "src\Svenkle.NuGetServer.Service\Svenkle.NuGetServer.Service.csproj", "{849C4739-2DC5-4112-97B0-23907F39A44E}"
-	ProjectSection(ProjectDependencies) = postProject
-		{4DBC0822-4CF2-41E3-A3E1-D87C64856985} = {4DBC0822-4CF2-41E3-A3E1-D87C64856985}
-	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Svenkle.NuGetServer.Website", "src\Svenkle.NuGetServer.Website\Svenkle.NuGetServer.Website.csproj", "{4DBC0822-4CF2-41E3-A3E1-D87C64856985}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Svenkle.NuGetServer.Website", "src\Svenkle.NuGetServer.Website\Svenkle.NuGetServer.Website.csproj", "{C4157CB8-9CF6-4956-9570-743EF65337D7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -25,10 +22,10 @@ Global
 		{849C4739-2DC5-4112-97B0-23907F39A44E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{849C4739-2DC5-4112-97B0-23907F39A44E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{849C4739-2DC5-4112-97B0-23907F39A44E}.Release|Any CPU.Build.0 = Release|Any CPU
-		{4DBC0822-4CF2-41E3-A3E1-D87C64856985}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{4DBC0822-4CF2-41E3-A3E1-D87C64856985}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{4DBC0822-4CF2-41E3-A3E1-D87C64856985}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{4DBC0822-4CF2-41E3-A3E1-D87C64856985}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C4157CB8-9CF6-4956-9570-743EF65337D7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C4157CB8-9CF6-4956-9570-743EF65337D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C4157CB8-9CF6-4956-9570-743EF65337D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C4157CB8-9CF6-4956-9570-743EF65337D7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
