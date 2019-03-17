@@ -9,7 +9,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("NuGet Server")]
-[assembly: AssemblyCopyright("Copyright © Svenkle 2017")]
+[assembly: AssemblyCopyright("Copyright © Svenkle 2019")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
