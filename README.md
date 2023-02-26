@@ -2,8 +2,8 @@
 NuGet Server is essentially a self-hosted wrapper of the [NuGet.Server](https://www.nuget.org/packages/NuGet.Server) package. NuGet Server is distributed with its own IIS Express instance and as such does not require a webserver to be installed on the machine.
 
 ## Requirements
-* .NET 4.6.1 or higher
-* Windows Server 2012, Windows Server 2016, Windows Server 2019, Windows 7, Windows 8, Windows 8.1 or Windows 10
+* .NET 4.8 or higher
+* Windows Server 2012, Windows Server 2016, Windows Server 2019, Windows 7, Windows 8, Windows 8.1, Windows 10 or Windows 11
 
 ## Getting Started
 ### Install as a Windows Service

@@ -8,30 +8,35 @@ using NuGet.Server.V2;
 
 [assembly: WebActivatorEx.PreApplicationStartMethod(typeof(Svenkle.NuGetServer.Website.App_Start.NuGetODataConfig), "Start")]
 
-namespace Svenkle.NuGetServer.Website.App_Start 
+namespace Svenkle.NuGetServer.Website.App_Start
 {
-    public static class NuGetODataConfig 
+	public static class NuGetODataConfig
 	{
-        public static void Start() 
+		public static void Start()
 		{
-            ServiceResolver.SetServiceResolver(new DefaultServiceResolver());
+			ServiceResolver.SetServiceResolver(new DefaultServiceResolver());
 
-            var config = GlobalConfiguration.Configuration;
+			var config = GlobalConfiguration.Configuration;
 
-            NuGetV2WebApiEnabler.UseNuGetV2WebApiFeed(config, "NuGetDefault", "nuget", "PackagesOData");
+			NuGetV2WebApiEnabler.UseNuGetV2WebApiFeed(
+				config,
+				"NuGetDefault",
+				"nuget",
+				"PackagesOData",
+				enableLegacyPushRoute: true);
 
-            config.Services.Replace(typeof(IExceptionLogger), new TraceExceptionLogger());
+			config.Services.Replace(typeof(IExceptionLogger), new TraceExceptionLogger());
 
-            // Trace.Listeners.Add(new TextWriterTraceListener(HostingEnvironment.MapPath("~/NuGet.Server.log")));
-            // Trace.AutoFlush = true;
+			// Trace.Listeners.Add(new TextWriterTraceListener(HostingEnvironment.MapPath("~/NuGet.Server.log")));
+			// Trace.AutoFlush = true;
 
-            config.Routes.MapHttpRoute(
-                name: "NuGetDefault_ClearCache",
-                routeTemplate: "nuget/clear-cache",
-                defaults: new { controller = "PackagesOData", action = "ClearCache" },
-                constraints: new { httpMethod = new HttpMethodConstraint(HttpMethod.Get) }
-            );
+			config.Routes.MapHttpRoute(
+				name: "NuGetDefault_ClearCache",
+				routeTemplate: "nuget/clear-cache",
+				defaults: new { controller = "PackagesOData", action = "ClearCache" },
+				constraints: new { httpMethod = new HttpMethodConstraint(HttpMethod.Get) }
+			);
 
-        }
-    }
+		}
+	}
 }
